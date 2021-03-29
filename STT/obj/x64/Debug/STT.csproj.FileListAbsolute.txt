@@ -1,0 +1,51 @@
+C:\Users\Cyp\Desktop\STT in Windows\STT\obj\x64\Debug\STT.csprojAssemblyReference.cache
+C:\Users\Cyp\Desktop\STT in Windows\STT\obj\x64\Debug\STT.Form1.resources
+C:\Users\Cyp\Desktop\STT in Windows\STT\obj\x64\Debug\STT_in_Windows.Properties.Resources.resources
+C:\Users\Cyp\Desktop\STT in Windows\STT\obj\x64\Debug\STT.csproj.GenerateResource.cache
+C:\Users\Cyp\Desktop\STT in Windows\STT\obj\x64\Debug\STT.csproj.CoreCompileInputs.cache
+C:\Users\Cyp\Desktop\STT in Windows\STT\obj\x64\Debug\STT in Windows.exe
+C:\Users\Cyp\Desktop\STT in Windows\STT\obj\x64\Debug\STT in Windows.pdb
+C:\Users\Cyp\Desktop\STT in Windows\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.core.dll
+C:\Users\Cyp\Desktop\STT in Windows\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.extension.kws.dll
+C:\Users\Cyp\Desktop\STT in Windows\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.extension.codec.dll
+C:\Users\Cyp\Desktop\STT in Windows\STT\bin\x64\Debug\STT in Windows.exe.config
+C:\Users\Cyp\Desktop\STT in Windows\STT\bin\x64\Debug\STT in Windows.exe
+C:\Users\Cyp\Desktop\STT in Windows\STT\bin\x64\Debug\STT in Windows.pdb
+C:\Users\Cyp\Desktop\STT in Windows\STT\bin\x64\Debug\Indieteur.GlobalHooks.dll
+C:\Users\Cyp\Desktop\STT in Windows\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.csharp.dll
+C:\Users\Cyp\Desktop\STT in Windows\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.csharp.xml
+C:\Users\Cyp\Desktop\STT in Windows\STT\obj\x64\Debug\STT.csproj.CopyComplete
+C:\Users\Cyphe\Desktop\STT\STT\obj\x64\Debug\STT.csprojAssemblyReference.cache
+C:\Users\Cyphe\Desktop\STT\STT\obj\x64\Debug\STT.Form1.resources
+C:\Users\Cyphe\Desktop\STT\STT\obj\x64\Debug\STT_in_Windows.Properties.Resources.resources
+C:\Users\Cyphe\Desktop\STT\STT\obj\x64\Debug\STT.csproj.GenerateResource.cache
+C:\Users\Cyphe\Desktop\STT\STT\obj\x64\Debug\STT.csproj.CoreCompileInputs.cache
+C:\Users\Cyphe\Desktop\STT\STT\obj\x64\Debug\STT in Windows.exe
+C:\Users\Cyphe\Desktop\STT\STT\obj\x64\Debug\STT in Windows.pdb
+C:\Users\Cyphe\Desktop\STT\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.core.dll
+C:\Users\Cyphe\Desktop\STT\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.extension.kws.dll
+C:\Users\Cyphe\Desktop\STT\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.extension.codec.dll
+C:\Users\Cyphe\Desktop\STT\STT\bin\x64\Debug\STT in Windows.exe.config
+C:\Users\Cyphe\Desktop\STT\STT\bin\x64\Debug\STT in Windows.exe
+C:\Users\Cyphe\Desktop\STT\STT\bin\x64\Debug\STT in Windows.pdb
+C:\Users\Cyphe\Desktop\STT\STT\bin\x64\Debug\Indieteur.GlobalHooks.dll
+C:\Users\Cyphe\Desktop\STT\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.csharp.dll
+C:\Users\Cyphe\Desktop\STT\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.csharp.xml
+C:\Users\Cyphe\Desktop\STT\STT\obj\x64\Debug\STT.csproj.CopyComplete
+C:\Users\Cyp\Downloads\STT\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.core.dll
+C:\Users\Cyp\Downloads\STT\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.extension.kws.dll
+C:\Users\Cyp\Downloads\STT\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.extension.codec.dll
+C:\Users\Cyp\Downloads\STT\STT\bin\x64\Debug\STT.exe.config
+C:\Users\Cyp\Downloads\STT\STT\bin\x64\Debug\STT.exe
+C:\Users\Cyp\Downloads\STT\STT\bin\x64\Debug\STT.pdb
+C:\Users\Cyp\Downloads\STT\STT\bin\x64\Debug\Indieteur.GlobalHooks.dll
+C:\Users\Cyp\Downloads\STT\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.csharp.dll
+C:\Users\Cyp\Downloads\STT\STT\bin\x64\Debug\Microsoft.CognitiveServices.Speech.csharp.xml
+C:\Users\Cyp\Downloads\STT\STT\obj\x64\Debug\STT.csprojAssemblyReference.cache
+C:\Users\Cyp\Downloads\STT\STT\obj\x64\Debug\STT.Form1.resources
+C:\Users\Cyp\Downloads\STT\STT\obj\x64\Debug\STT.Properties.Resources.resources
+C:\Users\Cyp\Downloads\STT\STT\obj\x64\Debug\STT.csproj.GenerateResource.cache
+C:\Users\Cyp\Downloads\STT\STT\obj\x64\Debug\STT.csproj.CoreCompileInputs.cache
+C:\Users\Cyp\Downloads\STT\STT\obj\x64\Debug\STT.csproj.CopyComplete
+C:\Users\Cyp\Downloads\STT\STT\obj\x64\Debug\STT.exe
+C:\Users\Cyp\Downloads\STT\STT\obj\x64\Debug\STT.pdb

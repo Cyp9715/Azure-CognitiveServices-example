@@ -1,0 +1,10 @@
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\bin\Debug\STT in Windows.exe.config
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\bin\Debug\STT in Windows.exe
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\bin\Debug\STT in Windows.pdb
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\obj\Debug\STT in Windows.csprojAssemblyReference.cache
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\obj\Debug\STT_in_Windows.Form1.resources
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\obj\Debug\STT_in_Windows.Properties.Resources.resources
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\obj\Debug\STT in Windows.csproj.GenerateResource.cache
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\obj\Debug\STT in Windows.csproj.CoreCompileInputs.cache
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\obj\Debug\STT in Windows.exe
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\obj\Debug\STT in Windows.pdb

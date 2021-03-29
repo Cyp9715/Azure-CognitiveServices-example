@@ -1,0 +1,42 @@
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.core.dll
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.extension.kws.dll
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.extension.codec.dll
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\bin\x64\Release\STT in Windows.exe.config
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\bin\x64\Release\STT in Windows.exe
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.csharp.dll
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.csharp.xml
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\obj\x64\Release\STT in Windows.csprojAssemblyReference.cache
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\obj\x64\Release\STT_in_Windows.Form1.resources
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\obj\x64\Release\STT_in_Windows.Properties.Resources.resources
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\obj\x64\Release\STT in Windows.csproj.GenerateResource.cache
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\obj\x64\Release\STT in Windows.csproj.CoreCompileInputs.cache
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\obj\x64\Release\STT in Windows.csproj.CopyComplete
+C:\Users\Cyphe\source\repos\STT in Windows\STT in Windows\obj\x64\Release\STT in Windows.exe
+C:\Users\Cyphe\Downloads\STT in Windows\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.core.dll
+C:\Users\Cyphe\Downloads\STT in Windows\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.extension.kws.dll
+C:\Users\Cyphe\Downloads\STT in Windows\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.extension.codec.dll
+C:\Users\Cyphe\Downloads\STT in Windows\STT in Windows\bin\x64\Release\STT in Windows.exe.config
+C:\Users\Cyphe\Downloads\STT in Windows\STT in Windows\bin\x64\Release\STT in Windows.exe
+C:\Users\Cyphe\Downloads\STT in Windows\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.csharp.dll
+C:\Users\Cyphe\Downloads\STT in Windows\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.csharp.xml
+C:\Users\Cyphe\Downloads\STT in Windows\STT in Windows\obj\x64\Release\STT in Windows.csprojAssemblyReference.cache
+C:\Users\Cyphe\Downloads\STT in Windows\STT in Windows\obj\x64\Release\STT_in_Windows.Form1.resources
+C:\Users\Cyphe\Downloads\STT in Windows\STT in Windows\obj\x64\Release\STT_in_Windows.Properties.Resources.resources
+C:\Users\Cyphe\Downloads\STT in Windows\STT in Windows\obj\x64\Release\STT in Windows.csproj.GenerateResource.cache
+C:\Users\Cyphe\Downloads\STT in Windows\STT in Windows\obj\x64\Release\STT in Windows.csproj.CoreCompileInputs.cache
+C:\Users\Cyphe\Downloads\STT in Windows\STT in Windows\obj\x64\Release\STT in Windows.csproj.CopyComplete
+C:\Users\Cyphe\Downloads\STT in Windows\STT in Windows\obj\x64\Release\STT in Windows.exe
+C:\Users\Cyp\Desktop\STT in Windows (1)\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.core.dll
+C:\Users\Cyp\Desktop\STT in Windows (1)\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.extension.kws.dll
+C:\Users\Cyp\Desktop\STT in Windows (1)\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.extension.codec.dll
+C:\Users\Cyp\Desktop\STT in Windows (1)\STT in Windows\bin\x64\Release\STT in Windows.exe.config
+C:\Users\Cyp\Desktop\STT in Windows (1)\STT in Windows\bin\x64\Release\STT in Windows.exe
+C:\Users\Cyp\Desktop\STT in Windows (1)\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.csharp.dll
+C:\Users\Cyp\Desktop\STT in Windows (1)\STT in Windows\bin\x64\Release\Microsoft.CognitiveServices.Speech.csharp.xml
+C:\Users\Cyp\Desktop\STT in Windows (1)\STT in Windows\obj\x64\Release\STT in Windows.csprojAssemblyReference.cache
+C:\Users\Cyp\Desktop\STT in Windows (1)\STT in Windows\obj\x64\Release\STT_in_Windows.Form1.resources
+C:\Users\Cyp\Desktop\STT in Windows (1)\STT in Windows\obj\x64\Release\STT_in_Windows.Properties.Resources.resources
+C:\Users\Cyp\Desktop\STT in Windows (1)\STT in Windows\obj\x64\Release\STT in Windows.csproj.GenerateResource.cache
+C:\Users\Cyp\Desktop\STT in Windows (1)\STT in Windows\obj\x64\Release\STT in Windows.csproj.CoreCompileInputs.cache
+C:\Users\Cyp\Desktop\STT in Windows (1)\STT in Windows\obj\x64\Release\STT in Windows.csproj.CopyComplete
+C:\Users\Cyp\Desktop\STT in Windows (1)\STT in Windows\obj\x64\Release\STT in Windows.exe
