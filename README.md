@@ -1,2 +1,1 @@
-# STT-in-Desktop
-stt in Windows using API(Azure, Google, Naver, etc...)
+packages.zip unzip plz.

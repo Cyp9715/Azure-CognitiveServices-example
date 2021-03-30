@@ -50,9 +50,9 @@ namespace STT
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_AzureKeySettingToggle = new System.Windows.Forms.TextBox();
             this.group_KeySett = new System.Windows.Forms.GroupBox();
-            this.btn_AzureOff = new System.Windows.Forms.Button();
-            this.btn_AzureOn = new System.Windows.Forms.Button();
-            this.group_JsonFile = new System.Windows.Forms.TabControl();
+            this.btn_AzureOFF = new System.Windows.Forms.Button();
+            this.btn_AzureON = new System.Windows.Forms.Button();
+            this.group_flatform = new System.Windows.Forms.TabControl();
             this.tabPage_Azure = new System.Windows.Forms.TabPage();
             this.tabPage_Google = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -60,22 +60,22 @@ namespace STT
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox_GoogleKeySettingSpeech = new System.Windows.Forms.TextBox();
-            this.btn_GoogleOff = new System.Windows.Forms.Button();
+            this.btn_GoogleOFF = new System.Windows.Forms.Button();
             this.d = new System.Windows.Forms.GroupBox();
             this.textBox_json = new System.Windows.Forms.TextBox();
             this.btn_jsonFind = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.btn_GoogleOn = new System.Windows.Forms.Button();
+            this.btn_GoogleON = new System.Windows.Forms.Button();
             this.openFileDialog_jsonFind = new System.Windows.Forms.OpenFileDialog();
-            this.textBox_Log = new System.Windows.Forms.TextBox();
+            this.textBox_log = new System.Windows.Forms.TextBox();
             this.group_Log = new System.Windows.Forms.GroupBox();
             this.context_NotifySupport.SuspendLayout();
             this.group_KeyAndRegion.SuspendLayout();
             this.group_LanguageSelect.SuspendLayout();
             this.group_KeySett.SuspendLayout();
-            this.group_JsonFile.SuspendLayout();
+            this.group_flatform.SuspendLayout();
             this.tabPage_Azure.SuspendLayout();
             this.tabPage_Google.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -146,7 +146,7 @@ namespace STT
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 65);
+            this.label2.Location = new System.Drawing.Point(16, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 12);
             this.label2.TabIndex = 6;
@@ -155,7 +155,7 @@ namespace STT
             // label_Key
             // 
             this.label_Key.AutoSize = true;
-            this.label_Key.Location = new System.Drawing.Point(16, 33);
+            this.label_Key.Location = new System.Drawing.Point(16, 29);
             this.label_Key.Name = "label_Key";
             this.label_Key.Size = new System.Drawing.Size(27, 12);
             this.label_Key.TabIndex = 5;
@@ -168,7 +168,7 @@ namespace STT
             "Korean"});
             this.textBox_AzurekeyValue.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBox_AzurekeyValue.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox_AzurekeyValue.Location = new System.Drawing.Point(67, 30);
+            this.textBox_AzurekeyValue.Location = new System.Drawing.Point(67, 26);
             this.textBox_AzurekeyValue.Name = "textBox_AzurekeyValue";
             this.textBox_AzurekeyValue.Size = new System.Drawing.Size(206, 21);
             this.textBox_AzurekeyValue.TabIndex = 1;
@@ -181,7 +181,7 @@ namespace STT
             "Korean"});
             this.textBox_AzureRegionValue.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBox_AzureRegionValue.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox_AzureRegionValue.Location = new System.Drawing.Point(67, 62);
+            this.textBox_AzureRegionValue.Location = new System.Drawing.Point(67, 58);
             this.textBox_AzureRegionValue.Name = "textBox_AzureRegionValue";
             this.textBox_AzureRegionValue.Size = new System.Drawing.Size(206, 21);
             this.textBox_AzureRegionValue.TabIndex = 4;
@@ -189,7 +189,7 @@ namespace STT
             // 
             // btn_Init
             // 
-            this.btn_Init.Location = new System.Drawing.Point(279, 60);
+            this.btn_Init.Location = new System.Drawing.Point(279, 56);
             this.btn_Init.Name = "btn_Init";
             this.btn_Init.Size = new System.Drawing.Size(75, 23);
             this.btn_Init.TabIndex = 3;
@@ -292,52 +292,53 @@ namespace STT
             this.group_KeySett.TabStop = false;
             this.group_KeySett.Text = "KeySetting";
             // 
-            // btn_AzureOff
+            // btn_AzureOFF
             // 
-            this.btn_AzureOff.BackColor = System.Drawing.Color.Gray;
-            this.btn_AzureOff.Enabled = false;
-            this.btn_AzureOff.FlatAppearance.BorderSize = 0;
-            this.btn_AzureOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AzureOff.Location = new System.Drawing.Point(239, 361);
-            this.btn_AzureOff.Name = "btn_AzureOff";
-            this.btn_AzureOff.Size = new System.Drawing.Size(168, 58);
-            this.btn_AzureOff.TabIndex = 13;
-            this.btn_AzureOff.Text = "OFF";
-            this.btn_AzureOff.UseVisualStyleBackColor = false;
-            this.btn_AzureOff.Click += new System.EventHandler(this.btn_AzureOff_Click);
+            this.btn_AzureOFF.BackColor = System.Drawing.Color.Gray;
+            this.btn_AzureOFF.Enabled = false;
+            this.btn_AzureOFF.FlatAppearance.BorderSize = 0;
+            this.btn_AzureOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AzureOFF.Location = new System.Drawing.Point(239, 361);
+            this.btn_AzureOFF.Name = "btn_AzureOFF";
+            this.btn_AzureOFF.Size = new System.Drawing.Size(168, 58);
+            this.btn_AzureOFF.TabIndex = 13;
+            this.btn_AzureOFF.Text = "OFF";
+            this.btn_AzureOFF.UseVisualStyleBackColor = false;
+            this.btn_AzureOFF.Click += new System.EventHandler(this.btn_AzureOff_Click);
             // 
-            // btn_AzureOn
+            // btn_AzureON
             // 
-            this.btn_AzureOn.BackColor = System.Drawing.Color.White;
-            this.btn_AzureOn.FlatAppearance.BorderSize = 0;
-            this.btn_AzureOn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AzureOn.Location = new System.Drawing.Point(46, 361);
-            this.btn_AzureOn.Name = "btn_AzureOn";
-            this.btn_AzureOn.Size = new System.Drawing.Size(173, 58);
-            this.btn_AzureOn.TabIndex = 14;
-            this.btn_AzureOn.Text = "ON";
-            this.btn_AzureOn.UseVisualStyleBackColor = false;
-            this.btn_AzureOn.Click += new System.EventHandler(this.btn_AzureOn_Click);
+            this.btn_AzureON.BackColor = System.Drawing.Color.White;
+            this.btn_AzureON.FlatAppearance.BorderSize = 0;
+            this.btn_AzureON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AzureON.Location = new System.Drawing.Point(46, 361);
+            this.btn_AzureON.Name = "btn_AzureON";
+            this.btn_AzureON.Size = new System.Drawing.Size(173, 58);
+            this.btn_AzureON.TabIndex = 14;
+            this.btn_AzureON.Text = "ON";
+            this.btn_AzureON.UseVisualStyleBackColor = false;
+            this.btn_AzureON.Click += new System.EventHandler(this.btn_AzureON_Click);
             // 
-            // group_JsonFile
+            // group_flatform
             // 
-            this.group_JsonFile.Controls.Add(this.tabPage_Azure);
-            this.group_JsonFile.Controls.Add(this.tabPage_Google);
-            this.group_JsonFile.Location = new System.Drawing.Point(12, 41);
-            this.group_JsonFile.Multiline = true;
-            this.group_JsonFile.Name = "group_JsonFile";
-            this.group_JsonFile.SelectedIndex = 0;
-            this.group_JsonFile.Size = new System.Drawing.Size(458, 477);
-            this.group_JsonFile.TabIndex = 15;
+            this.group_flatform.Controls.Add(this.tabPage_Azure);
+            this.group_flatform.Controls.Add(this.tabPage_Google);
+            this.group_flatform.Location = new System.Drawing.Point(12, 41);
+            this.group_flatform.Multiline = true;
+            this.group_flatform.Name = "group_flatform";
+            this.group_flatform.SelectedIndex = 0;
+            this.group_flatform.Size = new System.Drawing.Size(458, 477);
+            this.group_flatform.TabIndex = 15;
+            this.group_flatform.Selected += new System.Windows.Forms.TabControlEventHandler(this.group_flatform_Selected);
             // 
             // tabPage_Azure
             // 
             this.tabPage_Azure.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.tabPage_Azure.Controls.Add(this.group_KeySett);
-            this.tabPage_Azure.Controls.Add(this.btn_AzureOff);
+            this.tabPage_Azure.Controls.Add(this.btn_AzureOFF);
             this.tabPage_Azure.Controls.Add(this.group_KeyAndRegion);
             this.tabPage_Azure.Controls.Add(this.group_LanguageSelect);
-            this.tabPage_Azure.Controls.Add(this.btn_AzureOn);
+            this.tabPage_Azure.Controls.Add(this.btn_AzureON);
             this.tabPage_Azure.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Azure.Name = "tabPage_Azure";
             this.tabPage_Azure.Padding = new System.Windows.Forms.Padding(3);
@@ -349,10 +350,10 @@ namespace STT
             // 
             this.tabPage_Google.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.tabPage_Google.Controls.Add(this.groupBox2);
-            this.tabPage_Google.Controls.Add(this.btn_GoogleOff);
+            this.tabPage_Google.Controls.Add(this.btn_GoogleOFF);
             this.tabPage_Google.Controls.Add(this.d);
             this.tabPage_Google.Controls.Add(this.groupBox4);
-            this.tabPage_Google.Controls.Add(this.btn_GoogleOn);
+            this.tabPage_Google.Controls.Add(this.btn_GoogleON);
             this.tabPage_Google.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Google.Name = "tabPage_Google";
             this.tabPage_Google.Padding = new System.Windows.Forms.Padding(3);
@@ -383,6 +384,9 @@ namespace STT
             this.textBox_GoogleKeySettingToggle.ReadOnly = true;
             this.textBox_GoogleKeySettingToggle.Size = new System.Drawing.Size(290, 21);
             this.textBox_GoogleKeySettingToggle.TabIndex = 9;
+            this.textBox_GoogleKeySettingToggle.Enter += new System.EventHandler(this.textBox_GoogleKeySettingToggle_Enter);
+            this.textBox_GoogleKeySettingToggle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_GoogleKeySettingToggle_KeyDown);
+            this.textBox_GoogleKeySettingToggle.Leave += new System.EventHandler(this.textBox_GoogleKeySettingToggle_Leave);
             // 
             // label1
             // 
@@ -412,19 +416,23 @@ namespace STT
             this.textBox_GoogleKeySettingSpeech.ReadOnly = true;
             this.textBox_GoogleKeySettingSpeech.Size = new System.Drawing.Size(290, 21);
             this.textBox_GoogleKeySettingSpeech.TabIndex = 0;
+            this.textBox_GoogleKeySettingSpeech.Enter += new System.EventHandler(this.textBox_GoogleKeySettingSpeech_Enter);
+            this.textBox_GoogleKeySettingSpeech.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_GoogleKeySettingSpeech_KeyDown);
+            this.textBox_GoogleKeySettingSpeech.Leave += new System.EventHandler(this.textBox_GoogleKeySettingSpeech_Leave);
             // 
-            // btn_GoogleOff
+            // btn_GoogleOFF
             // 
-            this.btn_GoogleOff.BackColor = System.Drawing.Color.Gray;
-            this.btn_GoogleOff.Enabled = false;
-            this.btn_GoogleOff.FlatAppearance.BorderSize = 0;
-            this.btn_GoogleOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_GoogleOff.Location = new System.Drawing.Point(239, 361);
-            this.btn_GoogleOff.Name = "btn_GoogleOff";
-            this.btn_GoogleOff.Size = new System.Drawing.Size(168, 58);
-            this.btn_GoogleOff.TabIndex = 19;
-            this.btn_GoogleOff.Text = "OFF";
-            this.btn_GoogleOff.UseVisualStyleBackColor = false;
+            this.btn_GoogleOFF.BackColor = System.Drawing.Color.Gray;
+            this.btn_GoogleOFF.Enabled = false;
+            this.btn_GoogleOFF.FlatAppearance.BorderSize = 0;
+            this.btn_GoogleOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_GoogleOFF.Location = new System.Drawing.Point(239, 361);
+            this.btn_GoogleOFF.Name = "btn_GoogleOFF";
+            this.btn_GoogleOFF.Size = new System.Drawing.Size(168, 58);
+            this.btn_GoogleOFF.TabIndex = 19;
+            this.btn_GoogleOFF.Text = "OFF";
+            this.btn_GoogleOFF.UseVisualStyleBackColor = false;
+            this.btn_GoogleOFF.Click += new System.EventHandler(this.btn_GoogleOff_Click);
             // 
             // d
             // 
@@ -494,34 +502,35 @@ namespace STT
             this.radioButton2.Text = "Korean";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // btn_GoogleOn
+            // btn_GoogleON
             // 
-            this.btn_GoogleOn.BackColor = System.Drawing.Color.White;
-            this.btn_GoogleOn.FlatAppearance.BorderSize = 0;
-            this.btn_GoogleOn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_GoogleOn.Location = new System.Drawing.Point(46, 361);
-            this.btn_GoogleOn.Name = "btn_GoogleOn";
-            this.btn_GoogleOn.Size = new System.Drawing.Size(173, 58);
-            this.btn_GoogleOn.TabIndex = 20;
-            this.btn_GoogleOn.Text = "ON";
-            this.btn_GoogleOn.UseVisualStyleBackColor = false;
+            this.btn_GoogleON.BackColor = System.Drawing.Color.White;
+            this.btn_GoogleON.FlatAppearance.BorderSize = 0;
+            this.btn_GoogleON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_GoogleON.Location = new System.Drawing.Point(46, 361);
+            this.btn_GoogleON.Name = "btn_GoogleON";
+            this.btn_GoogleON.Size = new System.Drawing.Size(173, 58);
+            this.btn_GoogleON.TabIndex = 20;
+            this.btn_GoogleON.Text = "ON";
+            this.btn_GoogleON.UseVisualStyleBackColor = false;
+            this.btn_GoogleON.Click += new System.EventHandler(this.btn_GoogleON_Click);
             // 
             // openFileDialog_jsonFind
             // 
             this.openFileDialog_jsonFind.FileName = "openFileDialog_jsonFind";
             // 
-            // textBox_Result
+            // textBox_log
             // 
-            this.textBox_Log.Location = new System.Drawing.Point(6, 20);
-            this.textBox_Log.Multiline = true;
-            this.textBox_Log.Name = "textBox_Result";
-            this.textBox_Log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_Log.Size = new System.Drawing.Size(349, 194);
-            this.textBox_Log.TabIndex = 6;
+            this.textBox_log.Location = new System.Drawing.Point(6, 20);
+            this.textBox_log.Multiline = true;
+            this.textBox_log.Name = "textBox_log";
+            this.textBox_log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox_log.Size = new System.Drawing.Size(349, 194);
+            this.textBox_log.TabIndex = 6;
             // 
             // group_Log
             // 
-            this.group_Log.Controls.Add(this.textBox_Log);
+            this.group_Log.Controls.Add(this.textBox_log);
             this.group_Log.Location = new System.Drawing.Point(62, 547);
             this.group_Log.Name = "group_Log";
             this.group_Log.Size = new System.Drawing.Size(361, 220);
@@ -536,7 +545,7 @@ namespace STT
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(480, 823);
             this.Controls.Add(this.group_Log);
-            this.Controls.Add(this.group_JsonFile);
+            this.Controls.Add(this.group_flatform);
             this.Controls.Add(this.label_Title);
             this.Controls.Add(this.Btn_Exit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -549,7 +558,7 @@ namespace STT
             this.group_LanguageSelect.PerformLayout();
             this.group_KeySett.ResumeLayout(false);
             this.group_KeySett.PerformLayout();
-            this.group_JsonFile.ResumeLayout(false);
+            this.group_flatform.ResumeLayout(false);
             this.tabPage_Azure.ResumeLayout(false);
             this.tabPage_Google.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -586,9 +595,9 @@ namespace STT
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox_AzureKeySettingToggle;
         private System.Windows.Forms.GroupBox group_KeySett;
-        private System.Windows.Forms.Button btn_AzureOff;
-        private System.Windows.Forms.Button btn_AzureOn;
-        private System.Windows.Forms.TabControl group_JsonFile;
+        private System.Windows.Forms.Button btn_AzureOFF;
+        private System.Windows.Forms.Button btn_AzureON;
+        private System.Windows.Forms.TabControl group_flatform;
         private System.Windows.Forms.TabPage tabPage_Azure;
         private System.Windows.Forms.TabPage tabPage_Google;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -596,16 +605,16 @@ namespace STT
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox_GoogleKeySettingSpeech;
-        private System.Windows.Forms.Button btn_GoogleOff;
+        private System.Windows.Forms.Button btn_GoogleOFF;
         private System.Windows.Forms.GroupBox d;
         private System.Windows.Forms.TextBox textBox_json;
         private System.Windows.Forms.Button btn_jsonFind;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button btn_GoogleOn;
+        private System.Windows.Forms.Button btn_GoogleON;
         private System.Windows.Forms.OpenFileDialog openFileDialog_jsonFind;
-        private System.Windows.Forms.TextBox textBox_Log;
+        private System.Windows.Forms.TextBox textBox_log;
         private System.Windows.Forms.GroupBox group_Log;
     }
 }

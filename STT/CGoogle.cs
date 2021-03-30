@@ -11,7 +11,7 @@ namespace STT
     public class CGoogle
     {
         // example copy for https://cloud.google.com/speech-to-text/docs/streaming-recognize
-        static async Task<object> StreamingMicRecognizeAsync(int seconds)
+        static async Task<String> StreamingMicRecognizeAsync(int seconds)
         {
             var speech = SpeechClient.Create();
             var streamingCall = speech.StreamingRecognize();
@@ -24,7 +24,7 @@ namespace STT
                     {
                         Encoding = RecognitionConfig.Types.AudioEncoding.Linear16,
                         SampleRateHertz = 16000,
-                        LanguageCode = Language_Google.English_UnitedStates,
+                        LanguageCode = CGoogleLanguage.English_UnitedStates,
                     },
                     InterimResults = true,
                 }
@@ -80,7 +80,7 @@ namespace STT
 
             await streamingCall.WriteCompleteAsync();
             await printResponses;
-            return 0;
+            return "";
         }
     }
 }

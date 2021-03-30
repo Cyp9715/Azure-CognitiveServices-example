@@ -22,10 +22,10 @@ namespace STT
                 switch (curLanguage)
                 {
                     case e_language.English:
-                        speechConfig.SpeechRecognitionLanguage = Language_Azure.English_UnitedState;
+                        speechConfig.SpeechRecognitionLanguage = CAzureLanguage.English_UnitedState;
                         break;
                     case e_language.Korean:
-                        speechConfig.SpeechRecognitionLanguage = Language_Azure.Korean_Korea;
+                        speechConfig.SpeechRecognitionLanguage = CAzureLanguage.Korean_Korea;
                         break;
                 }
 

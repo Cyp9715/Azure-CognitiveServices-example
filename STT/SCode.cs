@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace STT
 {
-
     namespace Code
     {
-        public class Language_Azure
+        public class CAzureLanguage
         {
             public const string Arabic_Bahrain = "ar-BH";
             public const string Arabic_Egypt = "ar-EG";
@@ -108,7 +107,7 @@ namespace STT
             public const string Vietnamese_Vietnam = "vi-VN";
         }
 
-        public class Language_Google
+        public class CGoogleLanguage
         {
             public const string Afrikaans_SouthAfrica = "af-ZA";
             public const string Albanian_Albania = "sq-AL";
@@ -251,12 +250,9 @@ namespace STT
     }
 
 
-
-
-
     namespace Code
     {
-        public class Error_Azure
+        public class CAzureError
         {
             public const string initIsNull = "Error - Azure Key, Region field is empty.";
             public const string initCaution = "Caution - This program does not prove the validity of Azure Key and Region code. If it's not valid, it won't work.";
@@ -266,9 +262,13 @@ namespace STT
         }
 
 
-        public class Error_Google
+        public class CGoogleError
         {
-            
+            public const string initIsNull = "Error - Json file field is empty.";
+            public const string initCaution = "Caution - This program does not prove the validity of Google json file. If it's not valid, it won't work.";
+            public const string initBtnNotClicked = "Error : Init button is not clicked";
+            public const string keyIsNotSetting = "Error : key is not set";
+            public const string micNotRecognize = "Error - The microphone was not recognized.";
         }
     }
 }

@@ -41,11 +41,11 @@ namespace STT
 
         // get set Func
         private e_currentToggleState toogleState { get; set; }
-        public static e_language selectLan { get; private set; }
+        public static e_language e_selectionLanguage { get; private set; }
         public VirtualKeycodes tempKey { get; private set; }
 
         // error manage        
-        bool AzureinitCom = false;
+        bool azureInitCom = false;
         bool GoogleJsonCom = false;
 
 
@@ -65,24 +65,24 @@ namespace STT
         {
             if (String.IsNullOrEmpty(textBox_AzurekeyValue.Text) || String.IsNullOrEmpty(textBox_AzureRegionValue.Text))
             {
-                printLog(Error_Azure.initIsNull);
+                printLog(CAzureError.initIsNull);
             }
             else
             {
-                AzureinitCom = true;
+                azureInitCom = true;
                 azure.sttInit(textBox_AzurekeyValue.Text, textBox_AzureRegionValue.Text);
-                printLog(Error_Azure.initCaution);
+                printLog(CAzureError.initCaution);
             }
         }
 
         private void radioBtn_Korean_CheckedChanged(object sender, EventArgs e)
         {
-            selectLan = e_language.Korean;
+            e_selectionLanguage = e_language.Korean;
         }
 
         private void radioBtn_English_CheckedChanged(object sender, EventArgs e)
         {
-            selectLan = e_language.English;
+            e_selectionLanguage = e_language.English;
         }
 
         private void notifyIcon_DoubleClick(object sender, EventArgs e)
@@ -98,126 +98,25 @@ namespace STT
         }
 
 
-        // bottom is not form event.
-
-        private void InitializeForm()
-        {
-            // add Click & Move Windows
-            MouseDown += (o, e) => { if (e.Button == MouseButtons.Left) { On = true; Pos = e.Location; } };
-            MouseMove += (o, e) => { if (On) Location = new Point(Location.X + (e.X - Pos.X), Location.Y + (e.Y - Pos.Y)); };
-            MouseUp += (o, e) => { if (e.Button == MouseButtons.Left) { On = false; Pos = e.Location; } };
-        }
-
-        private void notifyActive(string titleMsg_, string tipMsg_)
-        {
-            notifyIcon.BalloonTipTitle = titleMsg_;
-            notifyIcon.BalloonTipText = tipMsg_;
-            notifyIcon.Visible = true;
-            notifyIcon.ShowBalloonTip(1000);
-        }
-
-        private async void GlobalKeyHook_OnKeyDown(object sender, GlobalKeyEventArgs e)
-        {
-            tempKey = e.KeyCode;
-
-            switch (toogleState)
-            {
-                case e_currentToggleState.AzureON:
-                    if (e.KeyCode.ToString() == textBox_AzureKeySettingSpeech.Text)
-                    {
-                        try
-                        {
-                            SendKeys.Send(await azure.MicrophoneInput(Form1.selectLan));
-                        }
-                        catch (System.ApplicationException)
-                        {
-                            printLog(Error_Azure.micNotRecognize);
-                        }
-                    }
-
-                    else if (e.KeyCode.ToString() == textBox_AzureKeySettingToggle.Text)
-                    {
-                        switch (toogleState)
-                        {
-                            case e_currentToggleState.AzureON:
-                                toogleState = e_currentToggleState.OFF;
-                                btn_AzureOff_Click(this, null);
-                                break;
-                        }
-                    }
-                    break;
-
-                case e_currentToggleState.GoogleON:
-                    if (e.KeyCode.ToString() == textBox_GoogleKeySettingSpeech.Text)
-                    {
-                        try
-                        {
-                            //change Google API
-                            //SendKeys.Send(await azure.MicrophoneInput(Form1.selectLan));
-                        }
-                        catch (System.ApplicationException)
-                        {
-                            //printLog(Error_Azure.micNotRecognize);
-                        }
-                    }
-
-                    else if (e.KeyCode.ToString() == textBox_GoogleKeySettingToggle.Text)
-                    {
-                        switch (toogleState)
-                        {
-                            case e_currentToggleState.GoogleON:
-                                toogleState = e_currentToggleState.OFF;
-                                btn_AzureOff_Click(this, null);
-                                break;
-                        }
-                    }
-                    break;
-            }
-        }
-
-        public void printLog(string message)
-        {
-            textBox_Log.AppendText(message);
-            textBox_Log.AppendText(Environment.NewLine);
-        }
-
-        private void globalKeyHookDispose()
-        {
-            if(globalKeyHook != null)
-            {
-                globalKeyHook.Dispose();
-                globalKeyHook = null;
-            }
-        }
-
-        private void globalKeyHookActive()
-        {
-            if(globalKeyHook == null)
-            {
-                globalKeyHook = new GlobalKeyHook();
-                globalKeyHook.OnKeyDown += GlobalKeyHook_OnKeyDown;
-            }
-        }
-
 
         // * Azure Section * //
 
-        private void btn_AzureOn_Click(object sender, EventArgs e)
+        private void btn_AzureON_Click(object sender, EventArgs e)
         {
             toogleState = e_currentToggleState.AzureON;
 
-            if (AzureinitCom == false)
+            if (azureInitCom == false)
             {
-                printLog(Error_Azure.initBtnNotClicked);
+                printLog(CAzureError.initBtnNotClicked);
             }
 
             if (String.IsNullOrEmpty(textBox_AzureKeySettingSpeech.Text) || String.IsNullOrEmpty(textBox_AzureKeySettingToggle.Text))
             {
-                printLog(Error_Azure.keyIsNotSetting);
+                printLog(CAzureError.keyIsNotSetting);
             }
             else
             {
-                btn_AzureOnChange();
+                btn_visualOn(btn_AzureON, btn_AzureOFF);
                 globalKeyHookActive();
                 notifyActive("Stt ON", "Stt is hooking the keyboard");
             }
@@ -227,9 +126,9 @@ namespace STT
         {
             toogleState = e_currentToggleState.OFF;
 
-            btn_AzureOffChange();
+            btn_visualOff(btn_AzureON, btn_AzureOFF);
             globalKeyHookDispose();
-            notifyActive("Stt OFF", "Stt is hooking Stop");
+            notifyActive("Stt OFF", "Stt hooking is stop");
         }
 
         private void textBox_AzureKeySettingSpeech_Enter(object sender, EventArgs e)
@@ -267,27 +166,6 @@ namespace STT
         }
 
 
-        private void btn_AzureOnChange()
-        {
-            btn_AzureOn.BackColor = Color.White;
-            btn_AzureOff.BackColor = Color.Gray;
-            btn_AzureOn.Enabled = false;
-            btn_AzureOff.Enabled = true;
-        }
-
-        private void btn_AzureOffChange()
-        {
-            btn_AzureOn.BackColor = Color.Gray;
-            btn_AzureOff.BackColor = Color.White;
-            btn_AzureOff.Enabled = false;
-            btn_AzureOn.Enabled = true;
-        }
-
-
-
-
-
-
 
         // * Google Section * //
 
@@ -297,5 +175,199 @@ namespace STT
             openFileDialog_jsonFind.ShowDialog();
             textBox_json.Text = openFileDialog_jsonFind.FileName;
         }
+
+        private void btn_GoogleON_Click(object sender, EventArgs e)
+        {
+            toogleState = e_currentToggleState.GoogleON;
+
+            if (GoogleJsonCom == false)
+            {
+                printLog(CGoogleError.initBtnNotClicked);
+            }
+
+            if (String.IsNullOrEmpty(textBox_json.Text))
+            {
+                printLog(CGoogleError.keyIsNotSetting);
+            }
+            else
+            {
+                btn_visualOn(btn_AzureON, btn_AzureOFF);
+                globalKeyHookActive();
+                notifyActive("Stt ON", "Stt is hooking the keyboard");
+            }
+
+            toogleState = e_currentToggleState.GoogleON;
+            globalKeyHookActive();
+            notifyActive("Stt Google ON", "Stt hooking is active");
+        }
+
+
+        private void btn_GoogleOff_Click(object sender, EventArgs e)
+        {
+            toogleState = e_currentToggleState.OFF;
+
+            btn_visualOff(btn_GoogleON, btn_GoogleOFF);
+            globalKeyHookDispose();
+            notifyActive("STT Google Off", "Stt hooking is stop");
+        }
+
+
+
+
+        // bottom is not form event.
+
+        private void InitializeForm()
+        {
+            // add Click & Move Windows
+            MouseDown += (o, e) => { if (e.Button == MouseButtons.Left) { On = true; Pos = e.Location; } };
+            MouseMove += (o, e) => { if (On) Location = new Point(Location.X + (e.X - Pos.X), Location.Y + (e.Y - Pos.Y)); };
+            MouseUp += (o, e) => { if (e.Button == MouseButtons.Left) { On = false; Pos = e.Location; } };
+        }
+
+        private void notifyActive(string titleMsg_, string tipMsg_)
+        {
+            notifyIcon.BalloonTipTitle = titleMsg_;
+            notifyIcon.BalloonTipText = tipMsg_;
+            notifyIcon.Visible = true;
+            notifyIcon.ShowBalloonTip(1000);
+        }
+
+        private async void GlobalKeyHook_OnKeyDown(object sender, GlobalKeyEventArgs e)
+        {
+            tempKey = e.KeyCode;
+
+            switch (toogleState)
+            {
+                case e_currentToggleState.AzureON:
+                    if (e.KeyCode.ToString() == textBox_AzureKeySettingSpeech.Text)
+                    {
+                        try
+                        {
+                            SendKeys.Send(await azure.MicrophoneInput(Form1.e_selectionLanguage));
+                        }
+                        catch (System.ApplicationException)
+                        {
+                            printLog(CAzureError.micNotRecognize);
+                        }
+                    }
+
+                    else if (e.KeyCode.ToString() == textBox_AzureKeySettingToggle.Text)
+                    {
+                        toogleState = e_currentToggleState.OFF;
+                        btn_AzureOff_Click(this, null);
+                    }
+                    break;
+
+                case e_currentToggleState.GoogleON:
+                    if (e.KeyCode.ToString() == textBox_GoogleKeySettingSpeech.Text)
+                    {
+                        try
+                        {
+                            //change Google API
+                            //SendKeys.Send(await azure.MicrophoneInput(Form1.selectLan));
+                        }
+                        catch (System.ApplicationException)
+                        {
+                            //printLog(Error_Azure.micNotRecognize);
+                        }
+                    }
+
+                    else if (e.KeyCode.ToString() == textBox_GoogleKeySettingToggle.Text)
+                    {
+                        toogleState = e_currentToggleState.OFF;
+                        btn_AzureOff_Click(this, null);
+                        break;
+                    }
+                    break;
+            }
+        }
+
+        public void printLog(string message)
+        {
+            textBox_log.AppendText(message);
+            textBox_log.AppendText(Environment.NewLine);
+        }
+
+        private void globalKeyHookDispose()
+        {
+            if (globalKeyHook != null)
+            {
+                globalKeyHook.Dispose();
+                globalKeyHook = null;
+            }
+        }
+
+        private void globalKeyHookActive()
+        {
+            if (globalKeyHook == null)
+            {
+                globalKeyHook = new GlobalKeyHook();
+                globalKeyHook.OnKeyDown += GlobalKeyHook_OnKeyDown;
+            }
+        }
+
+        private void btn_visualOn(Button btn_ON, Button btn_OFF)
+        {
+            btn_ON.BackColor = Color.White;
+            btn_OFF.BackColor = Color.Gray;
+            btn_ON.Enabled = false;
+            btn_OFF.Enabled = true;
+        }
+
+        private void btn_visualOff(Button btn_ON, Button btn_OFF)
+        {
+            btn_ON.BackColor = Color.Gray;
+            btn_OFF.BackColor = Color.White;
+            btn_OFF.Enabled = false;
+            btn_ON.Enabled = true;
+        }
+
+        private void group_flatform_Selected(object sender, TabControlEventArgs e)
+        {
+            if(e.TabPage == tabPage_Azure && toogleState == e_currentToggleState.GoogleON)
+            {
+                btn_GoogleOff_Click(this, null);
+            }
+            else if (e.TabPage == tabPage_Google && toogleState == e_currentToggleState.AzureON)
+            {
+                btn_AzureOff_Click(this, null);
+            }
+        }
+
+        private void textBox_GoogleKeySettingSpeech_Leave(object sender, EventArgs e)
+        {
+            textBox_GoogleKeySettingSpeech.BackColor = Color.Gray;
+            globalKeyHookDispose();
+        }
+
+        private void textBox_GoogleKeySettingSpeech_KeyDown(object sender, KeyEventArgs e)
+        {
+            textBox_GoogleKeySettingSpeech.Text = tempKey.ToString();
+        }
+
+        private void textBox_GoogleKeySettingSpeech_Enter(object sender, EventArgs e)
+        {
+            globalKeyHookActive();
+            textBox_GoogleKeySettingSpeech.BackColor = Color.White;
+        }
+
+        private void textBox_GoogleKeySettingToggle_Leave(object sender, EventArgs e)
+        {
+            textBox_GoogleKeySettingToggle.BackColor = Color.Gray;
+            globalKeyHookDispose();
+        }
+
+        private void textBox_GoogleKeySettingToggle_KeyDown(object sender, KeyEventArgs e)
+        {
+            textBox_GoogleKeySettingToggle.Text = tempKey.ToString();
+        }
+
+        private void textBox_GoogleKeySettingToggle_Enter(object sender, EventArgs e)
+        {
+            globalKeyHookActive();
+            textBox_GoogleKeySettingToggle.BackColor = Color.White;
+        }
     }
+
+
 }
