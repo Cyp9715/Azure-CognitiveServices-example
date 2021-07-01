@@ -10,7 +10,7 @@
 
 ~~3. Support for specific microphone recognition when using multiple microphones.~~
 
-Windows 11 will support STT mostly language, this repository is no longer needed.
+Windows 11 will support STT for mostly languages, this repository is no longer needed.
 
 but, this repository functions work fine
 
