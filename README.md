@@ -16,4 +16,4 @@ but, this repository functions work fine
 
 although only microsoft, google api are implemented.
 
-I don't delete the repository because we want to help people who use it.
+I don't delete the repository because want to help people who use it.
