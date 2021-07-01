@@ -40,13 +40,13 @@ Press the Speech field and then press any key to enter the key.
 
 The Off field is the same.
 
-1) How to use Speech?
+1) How to use Speech key?
 
 After setting the Speech key, click where you can enter such as Notepad.exe, Browser.exe, 
 
 press the Speech key you set and 'talk to the microphone' and what you said will be printed out in text.
 
-2) How to use Off?
+2) How to use Off key?
 
 Off disables Speech.
 
