@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using System.Diagnostics;
 using Indieteur.GlobalHooks;
 using STT.Code;
 
@@ -26,14 +18,12 @@ namespace STT
     {
         OFF,
         AzureON,
-        GoogleON
     }
 
     public partial class Form1 : Form
     {
         static GlobalKeyHook globalKeyHook;
         public CAzure azure = new CAzure();
-        public CGoogle google = new CGoogle();
 
         // form change variables
         private bool On;
@@ -46,8 +36,6 @@ namespace STT
 
         // error manage        
         bool azureInitCom = false;
-        bool GoogleJsonCom = false;
-
 
         public Form1()
         {
@@ -100,7 +88,6 @@ namespace STT
 
 
         // * Azure Section * //
-
         private void btn_AzureON_Click(object sender, EventArgs e)
         {
             toogleState = e_currentToggleState.AzureON;
@@ -166,54 +153,6 @@ namespace STT
         }
 
 
-
-        // * Google Section * //
-
-        private void btn_jsonFind_Click(object sender, EventArgs e)
-        {
-            openFileDialog_jsonFind.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            openFileDialog_jsonFind.ShowDialog();
-            textBox_json.Text = openFileDialog_jsonFind.FileName;
-        }
-
-        private void btn_GoogleON_Click(object sender, EventArgs e)
-        {
-            toogleState = e_currentToggleState.GoogleON;
-
-            if (GoogleJsonCom == false)
-            {
-                printLog(CGoogleError.initBtnNotClicked);
-            }
-
-            if (String.IsNullOrEmpty(textBox_json.Text))
-            {
-                printLog(CGoogleError.keyIsNotSetting);
-            }
-            else
-            {
-                btn_visualOn(btn_AzureON, btn_AzureOFF);
-                globalKeyHookActive();
-                notifyActive("Stt ON", "Stt is hooking the keyboard");
-            }
-
-            toogleState = e_currentToggleState.GoogleON;
-            globalKeyHookActive();
-            notifyActive("Stt Google ON", "Stt hooking is active");
-        }
-
-
-        private void btn_GoogleOff_Click(object sender, EventArgs e)
-        {
-            toogleState = e_currentToggleState.OFF;
-
-            btn_visualOff(btn_GoogleON, btn_GoogleOFF);
-            globalKeyHookDispose();
-            notifyActive("STT Google Off", "Stt hooking is stop");
-        }
-
-
-
-
         // bottom is not form event.
 
         private void InitializeForm()
@@ -236,49 +175,22 @@ namespace STT
         {
             tempKey = e.KeyCode;
 
-            switch (toogleState)
+            if (e.KeyCode.ToString() == textBox_AzureKeySettingSpeech.Text)
             {
-                case e_currentToggleState.AzureON:
-                    if (e.KeyCode.ToString() == textBox_AzureKeySettingSpeech.Text)
-                    {
-                        try
-                        {
-                            SendKeys.Send(await azure.MicrophoneInput(Form1.e_selectionLanguage));
-                        }
-                        catch (System.ApplicationException)
-                        {
-                            printLog(CAzureError.micNotRecognize);
-                        }
-                    }
+                try
+                {
+                    SendKeys.Send(await azure.MicrophoneInput(Form1.e_selectionLanguage));
+                }
+                catch (System.ApplicationException)
+                {
+                    printLog(CAzureError.micNotRecognize);
+                }
+            }
 
-                    else if (e.KeyCode.ToString() == textBox_AzureKeySettingToggle.Text)
-                    {
-                        toogleState = e_currentToggleState.OFF;
-                        btn_AzureOff_Click(this, null);
-                    }
-                    break;
-
-                case e_currentToggleState.GoogleON:
-                    if (e.KeyCode.ToString() == textBox_GoogleKeySettingSpeech.Text)
-                    {
-                        try
-                        {
-                            //change Google API
-                            //SendKeys.Send(await azure.MicrophoneInput(Form1.selectLan));
-                        }
-                        catch (System.ApplicationException)
-                        {
-                            //printLog(Error_Azure.micNotRecognize);
-                        }
-                    }
-
-                    else if (e.KeyCode.ToString() == textBox_GoogleKeySettingToggle.Text)
-                    {
-                        toogleState = e_currentToggleState.OFF;
-                        btn_AzureOff_Click(this, null);
-                        break;
-                    }
-                    break;
+            else if (e.KeyCode.ToString() == textBox_AzureKeySettingToggle.Text)
+            {
+                toogleState = e_currentToggleState.OFF;
+                btn_AzureOff_Click(this, null);
             }
         }
 
@@ -320,52 +232,6 @@ namespace STT
             btn_OFF.BackColor = Color.White;
             btn_OFF.Enabled = false;
             btn_ON.Enabled = true;
-        }
-
-        private void group_flatform_Selected(object sender, TabControlEventArgs e)
-        {
-            if(e.TabPage == tabPage_Azure && toogleState == e_currentToggleState.GoogleON)
-            {
-                btn_GoogleOff_Click(this, null);
-            }
-            else if (e.TabPage == tabPage_Google && toogleState == e_currentToggleState.AzureON)
-            {
-                btn_AzureOff_Click(this, null);
-            }
-        }
-
-        private void textBox_GoogleKeySettingSpeech_Leave(object sender, EventArgs e)
-        {
-            textBox_GoogleKeySettingSpeech.BackColor = Color.Gray;
-            globalKeyHookDispose();
-        }
-
-        private void textBox_GoogleKeySettingSpeech_KeyDown(object sender, KeyEventArgs e)
-        {
-            textBox_GoogleKeySettingSpeech.Text = tempKey.ToString();
-        }
-
-        private void textBox_GoogleKeySettingSpeech_Enter(object sender, EventArgs e)
-        {
-            globalKeyHookActive();
-            textBox_GoogleKeySettingSpeech.BackColor = Color.White;
-        }
-
-        private void textBox_GoogleKeySettingToggle_Leave(object sender, EventArgs e)
-        {
-            textBox_GoogleKeySettingToggle.BackColor = Color.Gray;
-            globalKeyHookDispose();
-        }
-
-        private void textBox_GoogleKeySettingToggle_KeyDown(object sender, KeyEventArgs e)
-        {
-            textBox_GoogleKeySettingToggle.Text = tempKey.ToString();
-        }
-
-        private void textBox_GoogleKeySettingToggle_Enter(object sender, EventArgs e)
-        {
-            globalKeyHookActive();
-            textBox_GoogleKeySettingToggle.BackColor = Color.White;
         }
     }
 
