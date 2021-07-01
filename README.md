@@ -32,23 +32,29 @@ Then click init.
 
 # How to Use this Program
 
-The program is designed to be simple
+This program is designed simply
 
-use keyboard global hooks
+※ As it uses a global hook, the program receives key input. This program doesn't send it over the Internet, so please be assured.
 
-rest assured, do not send keystrokes over the Internet
+Press the Speech field and then press any key to enter the key.
 
-in the **Speech field**, press the key to enter 'when you want to activate STT'
+The Off field is the same.
 
-and **Off field** is a shortcut to completely turn off STT.
+1) How to use Speech?
 
-When the set button is pressed, STT enters OFF mode and the Speech key does not work.
+After setting the Speech key, click where you can enter such as Notepad.exe, Browser.exe, 
 
-***After that***, press ON to activate the program.
+press the Speech key you set and 'talk to the microphone' and what you said will be printed out in text.
 
-then click on any inputable (notebook, website, etc), 
+2) How to use Off?
 
-press the key you set in Speech, and micro 'speak' and your words will be converted into text.
+Off disables Speech.
+
+If you want to turn on Speech again later, you have to press the ON button yourself.
+
+
+
+※ Pressing the Speech key does not accept input continuously. By default, if you say a sentence and take a break, the text conversion ends automatically (press the Speech key again to reactivate).
 
 
 # Precautions
