@@ -1,10 +1,10 @@
-# summary
+# Summary
 
 Windows 11 will support STT for mostly languages, this repository is no longer needed.
 
 but, this repository functions work fine
 
-although only microsoft, google api are implemented.
+implemented with Microsoft APIs.
 
 I don't delete the repository because want to help people who use it.
 
@@ -23,9 +23,7 @@ key 1 or key 2 do not matter, just input any key
 
 ![key](https://i.imgur.com/662y1v8.png)
 
-resion and Location are the same
-
-(It seems to indicate the location of Microsoft cloud server)
+resion and Location are the same (it seems to indicate the location of Microsoft cloud server)
 
 Then click init.
 
