@@ -10,7 +10,7 @@ I don't delete the repository because want to help people who use it.
 
 
 
-# Using MS API
+# Using Azure API
 
 ![frontEnd](https://i.imgur.com/45IK3sr.png)
 
