@@ -32,7 +32,7 @@ Then click init.
 
 This program is designed simply
 
-※ As it uses a global hook, the program receives key input. This program doesn't send it over the Internet, so please be assured.
+※ As it uses a global hook, the program receives key input. but doesn't send it over the Internet.
 
 Press the Speech field and then press any key to enter the key.
 
