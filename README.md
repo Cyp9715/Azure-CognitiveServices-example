@@ -4,7 +4,7 @@ Windows 11 will support STT for mostly languages, this repository is no longer n
 
 but, this repository functions work fine
 
-implemented with Microsoft APIs.
+implemented with Microsoft Azure APIs.
 
 I don't delete the repository because want to help people who use it.
 
