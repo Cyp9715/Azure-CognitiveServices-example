@@ -17,7 +17,9 @@ I don't delete the repository because want to help people who use it.
 
 use [MS cognitive-services](https://azure.microsoft.com/ko-kr/services/cognitive-services/) 
 
-you need to subscribe to the above API (most tests and light usage are available for free) and enter the key into the program
+you need to subscribe to the above API (most tests and light usage are available for free) 
+
+and enter the key into the program
 
 key 1 or key 2 do not matter, just input any key
 
@@ -52,7 +54,9 @@ If you want to turn on Speech again later, you have to press the ON button yours
 
 
 
-※ Pressing the Speech key does not accept input continuously. By default, if you say a sentence and take a break, the text conversion ends automatically (press the Speech key again to reactivate).
+※ Pressing the Speech key does not accept input continuously. By default, if you say a sentence and take a break, 
+
+the text conversion ends automatically (press the Speech key again to reactivate).
 
 
 # Precautions
