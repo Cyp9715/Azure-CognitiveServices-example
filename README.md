@@ -14,7 +14,7 @@ and enter the key into the program key 1 or key 2 do not matter, just input any 
 
 ![key](https://i.imgur.com/662y1v8.png)
 
-resion and Location are the same (it seems to indicate the location of Microsoft cloud server) Then click init.
+region and Location are the same (it seems to indicate the location of Microsoft cloud server) Then click init.
 
 # How to Use this Program
 This program is designed simply 
