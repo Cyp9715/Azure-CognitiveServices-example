@@ -17,10 +17,11 @@ and enter the key into the program key 1 or key 2 do not matter, just input any 
 region and Location are the same (it seems to indicate the location of Microsoft cloud server) Then click init.
 
 # How to Use this Program
-This program is designed simply 
-※ As it uses a global hook, the program receives key input. but doesn't send it over the Internet.  
+This program is designed simply  
 Press the Speech field and then press any key to enter the key.  
 The Off field is the same.
+
+※ As it uses a global hook
 
 1) How to use Speech key?
 After setting the Speech key, click where you can enter such as Notepad.exe, Browser.exe,  
