@@ -21,7 +21,7 @@ This program is designed simply
 Press the Speech field and then press any key to enter the key.  
 The Off field is the same.
 
-※ As it uses a global hook
+※ it use a global hook.
 
 1) How to use Speech key?
 After setting the Speech key, click where you can enter such as Notepad.exe, Browser.exe,  
